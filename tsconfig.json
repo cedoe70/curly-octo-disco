@@ -15,7 +15,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "types": ["node", "react", "jest"]
+    "types": ["node", "react", "jest"],
+    "baseUrl": ".", // 👈 REQUIRED for path aliases
+    "paths": {
+      "@/*": ["./*"] // 👈 maps @ to project root
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
